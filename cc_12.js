@@ -31,3 +31,18 @@ function addProduct(productName) {
 }
 
 // Example usage: addProduct("Laptop");
+
+// Task 4: Event Bubbling in Customer Section
+const customerSection = document.getElementById("customerSection"); // Select customer section
+
+customerSection.addEventListener("click", () => {
+    console.log("Customer section clicked"); // Log message from parent container
+});
+
+const customerCards = document.querySelectorAll(".customer-card"); // Select all customer cards
+customerCards.forEach(card => {
+    card.addEventListener("click", (event) => {
+        console.log("Customer card clicked"); // Log message from card
+        event.stopPropagation(); // Prevent event bubbling
+    });
+});
