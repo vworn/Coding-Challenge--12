@@ -3,85 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Dashboard</title>
+    <title>Coding Challenge 12</title>
     <style>
-        /* Basic styling for the page layout */
         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
+            background-color: beige;
         }
-        
-        /* Styling for the dashboard container where metric cards will be added */
-        #dashboard {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        /* Styling for metric cards inside the dashboard */
-        .metric-card {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        
-        /* Styling for the inventory list */
-        #inventoryList {
-            list-style: none;
-            padding: 0;
-        }
-        
-        /* Styling for individual product items */
-        .product-item {
-            padding: 10px;
-            background-color: lightgray;
-            margin: 5px 0;
-            cursor: pointer;
-        }
-        
-        /* Styling for the customer section container */
-        #customerSection {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            margin-top: 20px;
-        }
-        
-        /* Styling for individual customer cards */
         .customer-card {
-            padding: 15px;
-            border: 1px solid #888;
-            background-color: white;
-            margin: 10px 0;
+            border: 1px;
+            border-radius: 5px;
+            background-color: aqua;
+            color: black;
+            padding: 14px 28px;
+            font-size: 16px;
             cursor: pointer;
+        }
+        .customer-card:hover {
+            background-color: antiquewhite;
+        }
+        .metric-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding:  10px;
+            margin: 10px;
+            background-color: white;
         }
     </style>
 </head>
 <body>
+</body>
+<!-- task 1 -->
+<!-- dashboard display -->
+<div id="dashboard"></div>
 
-    <h1>Business Dashboard</h1>
+<!-- task 2 -->
+<div class="metric-card">
+   <h3>Expenses</h3>
+   <p>$20,000</p>
+</div>
+<div class="metric-card">
+   <h3>Profit</h3>
+   <p>$60,000</p>
+</div>
+<!-- task 3 -->
+ <h3>Inventory List</h3>
+ <button id="addProductButton">Add Product</button>
+ <ul id="inventoryList"></ul>
 
-    <!-- Dashboard container where metric cards will be dynamically inserted -->
-    <div id="dashboard"></div>
+ <!-- task 4 -->
+  <h3>Customer Section</h3>
+  <div id="customerSection">
+    <div class="customer-card">Customer 1</div>
+    <div class="customer-card">Customer 2</div>
+    <div class="customer-card">Customer 3</div>
+</div>
 
-    <h2>Inventory Management</h2>
-    <!-- Button to add new products dynamically -->
-    <button onclick="addProduct('New Product')">Add Product</button>
-    <!-- Inventory list where product items will be added -->
-    <ul id="inventoryList"></ul>
-
-    <h2>Customer Section</h2>
-    <!-- Customer section to demonstrate event bubbling -->
-    <div id="customerSection">
-        <h3>Customer List</h3>
-        <div class="customer-card">Customer 1</div>
-        <div class="customer-card">Customer 2</div>
-        <div class="customer-card">Customer 3</div>
-    </div>
-
-    <!-- Linking the JavaScript file for dynamic behavior -->
-    <script src="cc_12.js"></script>
+<script src="cc_12.js"></script>
 </body>
 </html>
