@@ -3,60 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Challenge 12</title>
+    <title>Interactive Business Dashboard</title>
     <style>
         body {
-            background-color: beige;
-        }
-        .customer-card {
-            border: 1px;
-            border-radius: 5px;
-            background-color: aqua;
-            color: black;
-            padding: 14px 28px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .customer-card:hover {
-            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
         }
         .metric-card {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding:  10px;
+            padding: 10px;
             margin: 10px;
-            background-color: white;
+            background-color: lightgray;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .product-item {
+            cursor: pointer;
+            color: blue;
+        }
+        .customer-card {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #dashboard, #inventoryList, #customerSection {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-</body>
-<!-- task 1 -->
-<!-- dashboard display -->
-<div id="dashboard"></div>
 
-<!-- task 2 -->
-<div class="metric-card">
-   <h3>Expenses</h3>
-   <p>$20,000</p>
-</div>
-<div class="metric-card">
-   <h3>Profit</h3>
-   <p>$60,000</p>
-</div>
-<!-- task 3 -->
- <h3>Inventory List</h3>
- <button id="addProductButton">Add Product</button>
- <ul id="inventoryList"></ul>
+    <h1>Interactive Business Dashboard</h1>
 
- <!-- task 4 -->
-  <h3>Customer Section</h3>
-  <div id="customerSection">
-    <div class="customer-card">Customer 1</div>
-    <div class="customer-card">Customer 2</div>
-    <div class="customer-card">Customer 3</div>
-</div>
+    <!-- Dashboard Metrics Section -->
+    <h2>Dashboard Metrics</h2>
+    <div id="dashboard"></div>
 
-<script src="cc_12.js"></script>
+    <!-- Inventory List Section -->
+    <h2>Inventory List</h2>
+    <ul id="inventoryList"></ul>
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <button type="submit">Add Product</button>
+        <div id="error"></div>
+    </form>
+
+    <!-- Customer Section -->
+    <h2>Customer Section</h2>
+    <div id="customerSection">
+        <div class="customer-card">Customer Jim</div>
+        <div class="customer-card">Customer Sue</div>
+        <div class="customer-card">Customer Bob</div>
+    </div>
+
+    <!-- Link to JavaScript File -->
+    <script src="cc_12.js"></script>
+
 </body>
 </html>
